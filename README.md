@@ -4,8 +4,6 @@ One way to resolve this error is to provide a custom type converter for these fi
 
 Here's an example of how you can create a type converter for your List<Integer> field:
 
-java
-Copy code
 public class ListConverter {
     @TypeConverter
     public static List<Integer> fromString(String value) {
@@ -33,12 +31,11 @@ public class ListConverter {
         return sb.toString();
     }
 }
+    
 This converter converts a List<Integer> to a comma-separated string and vice versa.
 
 To use this converter, add it to your Room database:
 
-java
-Copy code
 @Database(entities = {Reservation.class}, version = 1)
 @TypeConverters({ListConverter.class})
 public abstract class AppDatabase extends RoomDatabase {
