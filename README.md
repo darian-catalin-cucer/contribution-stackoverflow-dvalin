@@ -45,8 +45,6 @@ You can create a similar converter for the Bitmap field using the Bitmap.compres
 
 Note that if you're using Kotlin, you can use extension functions to create the type converters. For example:
 
-kotlin
-Copy code
 @TypeConverter
 fun fromString(value: String?): List<Int>? {
     return value?.split(",")?.map { it.toInt() }
