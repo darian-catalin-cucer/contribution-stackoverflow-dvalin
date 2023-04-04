@@ -1,3 +1,9 @@
+---
+
+https://stackoverflow.com/questions/73023135/room-error-cannot-figure-out-how-to-save-this-field-into-database-you-can-co
+
+---
+
 The error message suggests that Room cannot figure out how to save the places and codeQR fields of your Reservation class into the database.
 
 One way to resolve this error is to provide a custom type converter for these fields. Type converters allow Room to automatically convert non-primitive data types, such as lists and bitmaps, to and from their corresponding database representation.
